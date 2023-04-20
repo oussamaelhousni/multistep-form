@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Multi-step form</title>
+
+        <link rel="stylesheet" href="./style.css" />
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <aside class="sidebar">
+                <ul>
+                    <li>
+                        <button class="btn-step active">1</button>
+                        <div>
+                            <p class="uppercase color-gray">Step 1</p>
+                            <h5 class="tertiary-heading uppercase">
+                                Your info
+                            </h5>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button class="btn-step">2</button>
+                        <div>
+                            <p class="uppercase color-gray">Step 2</p>
+                            <h5 class="tertiary-heading uppercase">
+                                Select plan
+                            </h5>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button class="btn-step">3</button>
+                        <div>
+                            <p class="uppercase color-gray">Step 3</p>
+                            <h5 class="tertiary-heading uppercase">Add-ons</h5>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button class="btn-step">4</button>
+                        <div>
+                            <p class="uppercase color-gray">Step 4</p>
+                            <h5 class="tertiary-heading uppercase">Summary</h5>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="step step1">
+                        <div class="step__header">
+                            <div class="heading-primary">Personal Info</div>
+                            <p class="color-gray">
+                                Please provide your name, email address, and
+                                phone number.
+                            </p>
+                        </div>
+
+                        <div class="step__body form">
+                            <div class="form-control">
+                                <label for="name"
+                                    ><span>Name</span>
+                                    <span class="form-error"></span
+                                ></label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="e.g. Stephen King"
+                                />
+                            </div>
+
+                            <div class="form-control">
+                                <label for="email">
+                                    <span>Email Address</span
+                                    ><span class="form-error"></span
+                                ></label>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    id="email"
+                                    placeholder="e.g. stephenking@lorem.com"
+                                />
+                            </div>
+
+                            <div class="form-control">
+                                <label for="name"
+                                    ><span>Phone Number</span>
+                                    <span class="form-error"></span>
+                                </label>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="e.g. +1 234 567 890"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step step2">
+                        <div class="step__header">
+                            <div class="heading-primary">Select your plan</div>
+                            <p class="color-gray">
+                                You have the option of monthly or yearly
+                                billing.
+                            </p>
+                        </div>
+
+                        <div class="step__body form">
+                            <div class="form-options">
+                                <div class="form-option">
+                                    <input
+                                        type="radio"
+                                        name="plan"
+                                        id="arcade"
+                                        data-plan="arcade"
+                                        checked
+                                        hidden
+                                    />
+                                    <label for="arcade">
+                                        <img
+                                            src="./assets/images/icon-arcade.svg"
+                                            alt="arcade plan icon"
+                                        />
+                                        <p>
+                                            <span
+                                                class="tertiary-heading color-marine-blue"
+                                            >
+                                                Arcade </span
+                                            ><br />
+
+                                            <small> $9/mo </small>
+                                        </p>
+                                    </label>
+                                </div>
+
+                                <div class="form-option">
+                                    <input
+                                        type="radio"
+                                        name="plan"
+                                        id="advanced"
+                                        data-plan="advanced"
+                                        hidden
+                                    />
+                                    <label for="advanced">
+                                        <img
+                                            src="./assets/images/icon-advanced.svg"
+                                            alt="arcade plan icon"
+                                        />
+                                        <p>
+                                            <span
+                                                class="tertiary-heading color-marine-blue"
+                                            >
+                                                Advanced </span
+                                            ><br />
+
+                                            <small> $12/mo </small>
+                                        </p>
+                                    </label>
+                                </div>
+
+                                <div class="form-option">
+                                    <input
+                                        type="radio"
+                                        name="plan"
+                                        id="pro"
+                                        data-plan="pro"
+                                        hidden
+                                    />
+                                    <label for="pro">
+                                        <img
+                                            src="./assets/images/icon-pro.svg"
+                                            alt="arcade plan icon"
+                                        />
+                                        <p>
+                                            <span
+                                                class="tertiary-heading color-marine-blue"
+                                            >
+                                                Pro </span
+                                            ><br />
+
+                                            <small> $14/mo </small>
+                                        </p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__plan">
+                                <input
+                                    type="checkbox"
+                                    name="month-year"
+                                    id="month-year"
+                                    hidden
+                                />
+                                <span class="tertiary-heading monthly"
+                                    >Mothly</span
+                                >
+                                <label for="month-year"></label>
+                                <span class="tertiary-heading yearly"
+                                    >Yearly</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step step3">
+                        <div class="step__header">
+                            <div class="heading-primary">
+                                Pick add-ons Add-ons
+                            </div>
+                            <p class="color-gray">
+                                help enhance your gaming experience.
+                            </p>
+                        </div>
+
+                        <div class="step__body">
+                            <div class="form__add-on">
+                                <input type="checkbox" class="add-on" id="online-service" data-name="Online service"/>
+                                <label for="online-service">
+                                    <span>Online Service</span> <br />
+                                    <small>Access to multiplayer games</small>
+                                </label>
+                                <span>+$1/mo</span>
+                            </div>
+                            <div class="form__add-on">
+                                <input type="checkbox" class="add-on" id="larger-storage" data-name="Larger storage"/>
+                                <label for="larger-storage">
+                                    <span
+                                        class="tertiary-heading color-marine-blue"
+                                        >Larger storage</span
+                                    >
+                                    <br />
+                                    <small>Extra 1TB cloud save</small>
+                                </label>
+                                <span>+$2/mo</span>
+                            </div>
+                            <div class="form__add-on">
+                                <input type="checkbox" class="add-on" id="profile" data-name="Customizable profile" />
+                                <label for="profile">
+                                    <span>Customizable profile</span> <br />
+                                    <small>Custom theme on your profile</small>
+                                </label>
+                                <span>+$2/mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step step4">
+                        <div class="step__header">
+                            <div class="heading-primary">Finishing up</div>
+                            <p class="color-gray">
+                                Double-check everything looks OK before
+                                confirming.
+                            </p>
+                        </div>
+
+                        <div class="step__body">
+                            <ul class="final-check">
+                                <li class="final-check__change-plan">
+                                    <div>
+                                        <span
+                                            class="tertiary-heading color-marine-blue" id="planAndPlanOption"
+                                            >Arcade(Montly)</span
+                                        >
+                                        <small>Change</small>
+                                    </div>
+                                    <span
+                                        class="tertiary-heading color-marine-blue"
+                                        id="planPrice"
+                                        >$9/mo</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="color-gray"
+                                        >Online service</span
+                                    >
+                                    <span class="color-maring-blue"
+                                        >+$1/mo</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="color-gray"
+                                        >Larger storage</span
+                                    >
+                                    <span class="color-marine-blue"
+                                        >+$2/mo</span
+                                    >
+                                </li>
+                            </ul>
+                            <div class="final-check__total">
+                                <span class="color-gray"
+                                    >Total (per month)</span
+                                >
+                                <span class="secondary-heading" id="totalPrice">+$12/mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step step5">
+                        <img src="./assets/images/icon-thank-you.svg" alt="">
+                        <h1 class="heading-primary">Thank you!</h1>
+                        <p class="color-gray">Thanks for confirming your subscription! we hope you have fun using our platform. if you ever need  support, please feel free to email at support@loremgaming.com.</p>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <span class="hidden-btn"></span>
+                    <button class="btn d-none" id="back-btn">Go Back</button>
+                    <button class="btn" id="next-btn">Next Step</button>
+                    <button class="btn d-none" id="confirm-btn">confirm</button>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
